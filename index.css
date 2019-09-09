@@ -1,0 +1,162 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden; /*pour eviter les depassement */
+    background-color: #f8f9fa;
+
+}
+
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+ /*le conteneur princepal*/
+
+div#container{
+    width: 100%;
+}
+/*navigagtion*/
+nav{
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+footer {
+    background-color: royalblue;
+}
+div.menu{
+    width: 90%;
+    align-content: center;
+    align-items: center;
+    display: flex; /*pour que les elements s'aligne automatiquement en ligne*/
+    justify-content: space-between;
+    margin:0 auto;
+    padding: 10px;
+}
+div.options span{
+    margin-right: 10px;
+    padding: 10px;
+    color: #2b2e3b;
+    cursor: pointer;
+}
+
+div.options span.params{
+    background-color: royalblue;
+    color: white;
+    border-radius: 2px;
+    padding: 15px 25px;
+}
+ div.input input{
+     border:none;
+     padding: 15px;
+     box-shadow: 0 0 1.5px rgba(0,0,0,.3);
+     width: 700px;
+     font-size: 16px;
+     transition: all .2s ease;
+     border-radius: 2px;
+ }
+ div.input input:focus{
+     box-shadow: 0 0 3px rgba(0,0,0,.3);
+ }
+
+ div.item_slide{
+     display: flex; /* les elements vont s'aligner sur la ligne */
+     justify-content: space-between;
+     width: 85%;
+     margin: 70px auto;
+ }
+ div.item_slide h1{
+     width: 35px;
+     text-transform: uppercase;
+     font-weight: 100;
+     font-size: 30px;
+     font-family: 'Roboto', sans-serif;
+     color: #2b2e3b;
+     bottom: 15px;
+     animation-name: slide_titre;
+     animation-timing-function: ease-in-out;
+     animation-duration: .2s;
+ }
+
+ div.item_slide iframe{
+     animation-name: zoom;
+     z-index: 1000;
+     animation-duration: .5s;
+     animation-timing-function: ease-in-out;
+ }
+div.item_slide img{
+    animation-name: zoom;
+    z-index: 1000;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    width: 600px;
+    height: 400px;
+}
+
+ @keyframes slide_titre {
+     from{
+         transform: scale(0);
+     }
+     to {
+         transform: scale(1);
+     }
+ }
+
+ @keyframes zoom {
+     from{
+         transform: scale(1.2);
+     }
+     to{
+         transform: scale(1);
+     }
+ }
+
+ h1 button{
+     padding: 15px 20px;
+     border: none;
+     color: white;
+     background-color: royalblue;
+     border-radius: 2px;
+     cursor:pointer;
+     font-weight:500 ;
+     outline: none;
+     top: 20px;
+ }
+
+ a.slide{
+     position: absolute;
+     font-size: 20px;
+     font-weight: lighter;
+     padding: 10px;
+     opacity: .8;
+     color: #2b2e3b;
+     cursor: pointer;
+     top: 300px;
+ }
+
+ a.next{
+     right: 15px;
+ }
+ a.prev{
+     left: 15px;
+ }
+ div.circle{
+     text-align: center;
+     bottom: 30px;
+ }
+div.circle span{
+    width: 13px;
+    height: 13px;
+    display: inline-block ;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 10px 5px;
+    background-color: rgba(0,0,0,.3);
+    transition:all .2s ease-in-out ;
+}
+div.circle span.active{
+    background-color: royalblue;
+    transform: scale(1.3);
+}
+
+
